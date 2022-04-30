@@ -16,7 +16,7 @@ const Mypost = (props) => {
 
     let onChangePost = () => {
         let text = newPostElement.current.value;
-
+        props.updateNewPostText(text);
     }
 
     return (
@@ -26,7 +26,6 @@ const Mypost = (props) => {
                 <textarea
                     onChange={onChangePost}
                     ref={newPostElement}
-                    value={props.newPostText}
                 />
             </div>
 

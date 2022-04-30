@@ -25,7 +25,7 @@ let state = {
             {id: 2, message: 'It is my first post', likesCount: 25},
             {id: 3, message: 'Hello World', likesCount: 200},
         ],
-        newPostText: 'Hello Azad Kamarbandi',
+        newPostText: '',
     }
 }
 
@@ -40,8 +40,9 @@ export let addPost = (message) => {
     renderEntireTree(state);
 }
 
-export let onChangeText = () => {
-
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    renderEntireTree(state);
 }
 
 export default state;
