@@ -29,14 +29,17 @@ let state = {
     }
 }
 
-export let addPost = (message) => {
+window.state = state;
+
+export let addPost = () => {
     let newPost = {
         id: 4,
-        message: message,
+        message: state.profilePage.newPostText,
         likesCount: 200
     };
 
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
     renderEntireTree(state);
 }
 
